@@ -46,19 +46,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
   + Response 200 (application/json):
     ``` 
     {
-  "states": [
-    {
-      "_id": "60b9468d6bf3599325ede8e1",
-      "name": "SP"
-    },
-    {
-      "_id": "60b946ae6bf3599325ede8e2",
-      "name": "RJ"
-    },
-    {
-      "_id": "60b946eb6bf3599325ede8e3",
-      "name": "MG"
+        "states": [
+        {
+            "_id": "60b9468d6bf3599325ede8e1",
+            "name": "SP"
+        },{
+            "_id": "60b946ae6bf3599325ede8e2",
+            "name": "RJ"
+        },{
+            "_id": "60b946eb6bf3599325ede8e3",
+            "name": "MG"
+        }]
     }
-  ]
-}
     ```

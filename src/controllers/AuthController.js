@@ -82,6 +82,8 @@ module.exports = {
 
         await newUser.save()
 
+
+        res.status(201)
         res.json({token})
     },
 }

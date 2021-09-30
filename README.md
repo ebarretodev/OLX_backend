@@ -27,8 +27,11 @@ npm run startDev
 npm install
 npm start
 ```
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+For correctly use you must create the database olx and collections following the models on `/src/models/` and a ".env" file with directions for the database like  `DATABASE=mongodb://127.0.0.1:27017/olx`
 
 ## Endpoints available
 
@@ -40,7 +43,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
     {"pong":true}
     ```
 
-+ ### Test API [/states]
++ ### List States [/states]
   ### GET
   Route to list the states stored on DB.
   + Response 200 (application/json):
@@ -62,3 +65,27 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
       ]
     }
     ```
+
++ ### User register [/user/signup]
+  ### POST
+  Route for send info from new user.
+  + Request (application/json):
+    ``` 
+    {
+	  "name": "Name",
+	  "email":"name@teste.com",
+	  "state":"60b9468d6bf3599325ede8e1",
+	  "password":"123"
+    }
+    ```
+    State must be the same id from the list [GET/states].
+
+
+  + Response 201 (application/json):
+    ``` 
+    {
+      "token": "$2b$10$6AM8oiHyishfdBEYOWdg5uP.bktVKeKhuu0URChF.zVUoWC3X8WK6"
+    }
+    ```
+    The `token` must be used to authorize next transactions.
+    

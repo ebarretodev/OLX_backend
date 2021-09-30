@@ -84,7 +84,7 @@ For correctly use you must create the database olx and collections following the
   + Response 201 (application/json):
     ``` 
     {
-      "token": "$2b$10$6AM8oiHyishfdBEYOWdg5uP.bktVKeKhuu0URChF.zVUoWC3X8WK6"
+      "token": "$2b$10$2Mf3cdCyoQMQLKXJK6UDD.TO5jUnwhrWZ8CTlNPU1d4Z3coTQKlsK"
     }
     ```
     The `token` must be used to authorize next transactions.

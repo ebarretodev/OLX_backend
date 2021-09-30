@@ -2,7 +2,7 @@
 
 ## Introduction to project
 
-This project is about to replicate a backend from the old version of website [https://www.olx.com.br](https://www.olx.com.br).
+This project is about to replicate a backend from the old version of website [https://www.olx.com.br](https://www.olx.com.br). This API uses a MongoDB to save informations from Users, Ads, States and Categories of Products.
 
 ## Status 
 
@@ -32,3 +32,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Endpoints available
 
+### Test API [GET/ping]
+This route is for only test purpose.

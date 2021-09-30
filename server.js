@@ -28,8 +28,20 @@ server.use(express.json())
 server.use(express.urlencoded({extended:true}))
 server.use(fileUpload())
 server.use(express.static(__dirname+'/public'))
+
 server.use('/', apiRoutes)
 
+server.use((req, res) => {
+    res.status(404);
+    res.json({error: 'Endpoint não encontrado.'});
+});
+
+const errorHandler = (err, req, res, next) => {
+    res.status(400); // Bad Request
+    console.log( err );
+    res.json({ error: 'Ocorreu algum erro.' });
+}
+server.use(errorHandler);
 
 server.listen(process.env.PORT, ()=>{
     console.log(` - Rodando no endereço: ${process.env.BASE}`)

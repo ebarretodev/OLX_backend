@@ -36,6 +36,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
   Route for only test communication purpose.
   + Response 200 (application/json):
     ``` 
-    {"pong":"true"}
+    {"pong":true}
     ```
 

@@ -32,7 +32,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Endpoints available
 
-+ ### Test API [GET/ping]
++ ### Test API [/ping]
+  #### GET
   Route for only test communication purpose.
   + Response 200 (application/json):
     ``` 

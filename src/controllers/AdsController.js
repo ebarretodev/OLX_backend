@@ -90,6 +90,7 @@ module.exports = {
         }
 
         const info = await newAd.save()
+        res.status(201)
         res.json({id: info._id})
 
 

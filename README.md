@@ -274,6 +274,27 @@ For correctly use you must create the database olx and collections following the
     }
     ```
 
++ ### Add a new ad [/ad/add]
+  ### POST
+  Route for create a new ad. To create the Ad you must have token. Require send all fields. 
+  + Request (application/json):
+    ``` 
+    {
+	  "token": "$2b$10$2Mf3cdCyoQMQLKXJK6UDD.TO5jUnwhrWZ8CTlNPU1d4Z3coTQKlsK"
+      "title": "Test Ad",
+      "price": "R$ 100,35",
+	  "priceneg": "true",
+	  "desc": "Any description required.",
+	  "cat": "baby"
+    }
+    ```
+    
+  + Response 201 (application/json):
+    ``` 
+    {
+      "id": "60f0f0f33c549c335c822c0b"
+    }
+    ```
+
 ## TODO 
 + Implement JWT!
-+ Finish endpoints documentation.

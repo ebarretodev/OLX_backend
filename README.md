@@ -66,6 +66,47 @@ For correctly use you must create the database olx and collections following the
     }
     ```
 
++ ### List Categories [/categories]
+  ### GET
+  Route to list the categories stored on DB.
+  + Response 200 (application/json):
+    ``` 
+    {
+      "categories": [
+      {
+        "_id": "60ea4be78980be3da569df7a",
+        "name": "Bebês",
+        "slug": "baby",
+        "img": "http://localhost:5000/assets/images/baby.png"
+      },
+      {
+        "_id": "60ea4c298980be3da569df7b",
+        "name": "Carros",
+        "slug": "cars",
+        "img": "http://localhost:5000/assets/images/cars.png"
+      },
+      {
+        "_id": "60ea4c408980be3da569df7c",
+        "name": "Roupas",
+        "slug": "clothes",
+        "img": "http://localhost:5000/assets/images/clothes.png"
+      },
+      {
+        "_id": "60ea4c698980be3da569df7d",
+        "name": "Eletrônicos",
+        "slug": "electronics",
+        "img": "http://localhost:5000/assets/images/electronics.png"
+      },
+      {
+        "_id": "60ea4c868980be3da569df7e",
+        "name": "Esportes",
+        "slug": "sports",
+        "img": "http://localhost:5000/assets/images/sports.png"
+      }
+      ]
+    }
+    ```
+
 + ### User register [/user/signup]
   ### POST
   Route for send info from new user.
@@ -126,6 +167,28 @@ For correctly use you must create the database olx and collections following the
       "ads": []
     }
     ```
+  
+  ### POST
+  Route for send info from new user.
+  + Request (application/json):
+    ``` 
+    {
+	  "token": "$2b$10$2Mf3cdCyoQMQLKXJK6UDD.TO5jUnwhrWZ8CTlNPU1d4Z3coTQKlsK",
+      "name": "New Name"
+    }
+    ```
+    It is possible to send only the fields that must be edited, not required to send all data.
+    
+  + Response 200 (application/json):
+    ``` 
+    {
+      "name": "New Name",
+      "email": "name@teste.com",
+      "state": "SP",
+      "ads": []
+    }
+    ```
+
 
 ## TODO 
 + Implement JWT!

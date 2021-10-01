@@ -88,7 +88,7 @@ For correctly use you must create the database olx and collections following the
     ```
     The `token` must be used to authorize next transactions. 
 
-  + ### User signin [/user/signin]
++ ### User signin [/user/signin]
   ### POST
   Route for login user.
   + Request (application/json):
@@ -107,7 +107,7 @@ For correctly use you must create the database olx and collections following the
     ```
     The `token` must be used to authorize next transactions. 
 
-  + ### User info [/user/me]
++ ### User info [/user/me]
   ### GET
   Route for send info from new user.
   + Request (application/json):
@@ -124,7 +124,6 @@ For correctly use you must create the database olx and collections following the
       "email": "name@teste.com",
       "state": "SP",
       "ads": []
-}
     }
     ```
 

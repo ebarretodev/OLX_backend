@@ -154,7 +154,7 @@ module.exports = {
 
     },
     getItem: async (req, res)=>{
-        let { id, other = null} = req.query
+        let { id, other = null} = req.params
         if(!id){return res.json({error:'Sem Produto!'})}
 
         if(id.length < 12){return res.json({error:'ID inválido!'})}

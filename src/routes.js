@@ -31,7 +31,7 @@ router.get('/categories', AdsController.getCategories)//feito
 
 router.post('/ad/add', Auth.private, AdsController.addAction) //feito
 router.get('/ad/list', AdsController.getList) //feito com filtros
-router.get('/ad/item', AdsController.getItem) 
+router.get('/ad/:id', AdsController.getItem) 
 router.post('/ad/:id', Auth.private, AdsController.editAction)
 
 

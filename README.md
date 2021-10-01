@@ -188,7 +188,54 @@ For correctly use you must create the database olx and collections following the
       "ads": []
     }
     ```
++ ### Ads list [/ad/list]
+  ### GET
+  Route for request ads list. 
+  + Response 200 (application/json):
+    ``` 
+    {
+      "ads": [
+        {
+          "id": "60efa9f46d1c75621dba485b",
+          "title": "Test",
+          "price": 222.35,
+          "priceNegotiable": true,
+           "image": "http://localhost:5000/media/b1e11380-4a49-4877-aeca-e5a8a37c49e6.jpg"
+        }
+      ],
+      "total": 1
+    }
+    ```
 
++ ### Get Item by ID [/ad/:id]
+  ### GET
+  Route for request all info from an id. 
+  + Response 200 (application/json):
+    ``` 
+    {
+      "id": "60efa9f46d1c75621dba485b",
+      "title": "Teste de edição",
+      "price": 222.35,
+      "priceNegotiable": true,
+      "description": "Qualquer coisa",
+      "dateCreated": "2021-07-15T03:22:28.807Z",
+      "views": 42,
+      "images": [
+         "http://localhost:5000/media/b1e11380-4a49-4877-aeca-e5a8a37c49e6.jpg"
+      ],
+      "category": {
+        "_id": "60ea4be78980be3da569df7a",
+        "name": "Bebês",
+        "slug": "baby"
+      },
+      "userInfo": {
+        "name": "Isaac",
+        "email": "isaac@teste.com"
+      },
+      "stateName": "RJ",
+      "others": []
+    }
+    ```
 
 ## TODO 
 + Implement JWT!

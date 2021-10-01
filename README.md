@@ -80,12 +80,54 @@ For correctly use you must create the database olx and collections following the
     ```
     State must be the same id from the list [GET/states].
 
-
   + Response 201 (application/json):
     ``` 
     {
       "token": "$2b$10$2Mf3cdCyoQMQLKXJK6UDD.TO5jUnwhrWZ8CTlNPU1d4Z3coTQKlsK"
     }
     ```
-    The `token` must be used to authorize next transactions.
+    The `token` must be used to authorize next transactions. 
+
+  + ### User signin [/user/signin]
+  ### POST
+  Route for login user.
+  + Request (application/json):
+    ``` 
+    {
+	  "name": "Name",
+	  "password":"123"
+    }
+    ```
+
+  + Response 200 (application/json):
+    ``` 
+    {
+      "token": "$2b$10$2Mf3cdCyoQMQLKXJK6UDD.TO5jUnwhrWZ8CTlNPU1d4Z3coTQKlsK"
+    }
+    ```
+    The `token` must be used to authorize next transactions. 
+
+  + ### User info [/user/me]
+  ### GET
+  Route for send info from new user.
+  + Request (application/json):
+    ``` 
+    {
+	  "token": "$2b$10$2Mf3cdCyoQMQLKXJK6UDD.TO5jUnwhrWZ8CTlNPU1d4Z3coTQKlsK"
+    }
+    ```
     
+  + Response 200 (application/json):
+    ``` 
+    {
+      "name": "Name",
+      "email": "name@teste.com",
+      "state": "SP",
+      "ads": []
+}
+    }
+    ```
+
+## TODO 
++ Implement JWT!
++ Finish endpoints documentation.
